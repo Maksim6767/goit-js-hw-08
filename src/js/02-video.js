@@ -9,11 +9,10 @@ let parsedTime;
 player.on('timeupdate', throttle(onPlay, 1000));
 
 function onPlay({ seconds }) {
- localStorage.setItem('videoplayer-current-time', seconds);
  localStorage.setItem(CURRENT_TIME, seconds);
 }
 
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+player.setCurrentTime(localStorage.getItem('CURRENT_TIME'));
 setCurrentTime();
 
 function setCurrentTime() {
